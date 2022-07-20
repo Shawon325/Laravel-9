@@ -24,7 +24,7 @@ services:
     container_name: crm-nginx
     restart: unless-stopped
     ports:
-      - 8000:80
+      - 8004:80
     volumes:
       - ./:/var/www
       - ./.docker/nginx:/etc/nginx/conf.d/
@@ -54,7 +54,7 @@ services:
     depends_on:
       - database
     ports:
-      - 9000:80
+      - 9004:80
     environment:
       PMA_HOST: database
       PMA_PORT: 3306
